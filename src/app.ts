@@ -17,7 +17,7 @@ class App{
             light1.intensity = 0.5;
 
             
-            const result = await SceneLoader.ImportMeshAsync(null,"./assets/","scene.gltf",scene);
+            // const result = await SceneLoader.ImportMeshAsync(null,"./assets/","scene.gltf",scene);
             var sphere: Mesh = Mesh.CreateSphere("spere1",16,0.5,scene);
             var box: Mesh = Mesh.CreateBox("box",0.5,scene);
             box.position.y = 1;
