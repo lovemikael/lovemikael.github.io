@@ -1,7 +1,7 @@
 import "@babylonjs/core/Debug/debugLayer";
 import "@babylonjs/inspector";
 import "@babylonjs/loaders/glTF";
-import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBuilder, FreeCamera, WebXRExperienceHelper,WebXRFeaturesManager,WebXRPlaneDetector,WebXRAnchorSystem, Color3 } from "@babylonjs/core";
+import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBuilder, FreeCamera, WebXRExperienceHelper,WebXRFeaturesManager,WebXRPlaneDetector,WebXRAnchorSystem, Color3, HingeJoint } from "@babylonjs/core";
 import {HelloWorld} from "./classes/HelloWorld";
 import { version } from "webpack";
 class App{
@@ -20,10 +20,10 @@ class App{
             var light1: HemisphericLight = new HemisphericLight("light1", new Vector3(0, 1, 0), scene);
             light1.intensity = 100;
 
-            var sphere: Mesh = Mesh.CreateSphere("spere1",16,2,scene);
+            var sphere: Mesh = Mesh.CreateSphere("spere1",16,0.5,scene);
             
             sphere.position.y = 2;
-            
+            sphere.position.x = 1.5;
             
             
             const xr = await scene.createDefaultXRExperienceAsync({
