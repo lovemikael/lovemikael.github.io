@@ -23,8 +23,8 @@ class App{
             var sphere: Mesh = Mesh.CreateSphere("spere1",16,2,scene);
             
             sphere.position.y = 2;
-            const env = scene.createDefaultEnvironment();
-            env.setMainColor(Color3.Green());
+            
+            
             
             const xr = await scene.createDefaultXRExperienceAsync({
                 uiOptions: {sessionMode: "immersive-ar"}
