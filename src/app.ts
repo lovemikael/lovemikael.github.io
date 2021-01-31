@@ -26,7 +26,8 @@ class App{
             sphere.position.z = 1.5;
             var boxMaterial = new StandardMaterial("boxmaterial",scene);
             boxMaterial.diffuseColor = Color3.Purple();
-            
+            sphere.material = boxMaterial;
+
             const xr = await scene.createDefaultXRExperienceAsync({
                 uiOptions: {sessionMode: "immersive-ar"}
             });
